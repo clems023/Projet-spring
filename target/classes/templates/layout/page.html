@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Hotel Dashboard Template</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" th:href="@{/assets/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/plugins/fontawesome/css/fontawesome.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/plugins/fontawesome/css/all.min.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/feathericon.min.css}">
+    <link rel="stylehseet" href="https://cdn.oesmith.co.uk/morris-0.5.1.css">
+    <link rel="stylesheet" th:href="@{/assets/plugins/morris/morris.css}">
+    <link rel="stylesheet" th:href="@{/assets/css/style.css}"> </head>
+
+<body>
+<div class="main-wrapper">
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="logo"> <span class="logoclass">Vente GESTIONNAIRE</span> </a>
+            <a href="index.html" class="logo logo-small"></a>
+        </div>
+
+    </div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-inner slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <ul>
+                    <li class="active"> <a href="index.html"><i class="fas fa-tachometer-alt"></i> <span>Menu :</span></a> </li>
+                    <li class="list-divider"></li>
+                    <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Les categories</span> <span class="menu-arrow"></span></a>
+                        <ul class="submenu_class" style="display: none;">
+                            <li>
+                                <a th:href="@{/categorie/create}">
+                                    <p>Créer une catégorie </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/categorie/}">
+                                    <p>Liste des Catégories</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Les Articles </span> <span class="menu-arrow"></span></a>
+                        <ul class="submenu_class" style="display: none;">
+                            <li>
+                                <a th:href="@{/article/}">
+                                    <p>Liste des Articles </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/article/create}">
+                                    <p>Ajouter un Article</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="submenu"> <a href="#"><i class="far fa-money-bill-alt"></i> <span> Les ventes </span> <span class="menu-arrow"></span></a>
+                        <ul class="submenu_class" style="display: none;">
+                            <li>
+                                <a th:href="@{/vente/}">
+                                    <p>Faire une vente</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a th:href="@{/vente/liste}">
+                                    <p>Liste des ventes</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper">
+        <div class="content container-fluid">
+            <section layout:fragment="content">
+
+            </section>
+        </div>
+    </div>
+</div>
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script th:src="@{/assets/js/jquery-3.5.1.min.js}"></script>
+<script th:src="@{/assets/js/popper.min.js}"></script>
+<script th:src="@{/assets/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/plugins/slimscroll/jquery.slimscroll.min.js}"></script>
+<script th:src="@{/assets/plugins/raphael/raphael.min.js}"></script>
+<script th:src="@{/assets/plugins/morris/morris.min.js}"></script>
+<script th:src="@{/assets/js/script.js}"></script>
+
+<section  layout:fragment="script">
+
+</section>
+</body>
+
+</html>
